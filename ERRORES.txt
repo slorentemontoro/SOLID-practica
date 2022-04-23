@@ -1,0 +1,9 @@
+Principio de Responsabilidad Unica: Hay funciones en el archivo File que se pueden separar como los metodos de conversion de audio.
+
+Principio de inversion de dependencias: Algunas clases dependen de otras y los cambios que puedan haber en un futuro.
+
+Principio de Segregacion de interfaces: Una interfaz contenia muchos metodos que algunas clases hijas no los usaba. Por lo que es mejor separarlos en diferentes interfaces para que cada clase hija.
+
+Principio de sustitucion de Liskov: Hay algunas clases hijas que lanzan excepciones mas restrictivas que su clase padre.
+
+Principio de Abierto/Cerrado: La visibilidad de los atributos deberian ser privados y acceder a ellos desde metodos get y set. Ademas para modificar cualquier cosa necesitas tocar todas las clases.

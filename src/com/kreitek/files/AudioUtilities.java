@@ -1,7 +1,6 @@
-package com.kreitek.files.File;
+package com.kreitek.files;
 
 import com.kreitek.files.File.File;
-import com.kreitek.files.FileSystemItem;
 import com.kreitek.files.error.InvalidFileFormatException;
 
 public class AudioUtilities extends File {
@@ -20,13 +19,13 @@ public class AudioUtilities extends File {
             throw new InvalidFileFormatException("El fichero debe ser mp3");
         }
 
-        int indexOfLastDot = name.lastIndexOf(".");
-        String nameWithoutExtension = name;
+        int indexOfLastDot = getName().lastIndexOf(".");
+        String nameWithoutExtension = getName();
         if (indexOfLastDot > 0) {
-            nameWithoutExtension = name.substring(0, indexOfLastDot);
+            nameWithoutExtension = getName().substring(0, indexOfLastDot);
         }
         String newFileName = nameWithoutExtension + ".wav";
-        FileSystemItem result = new File(parent, newFileName);
+        FileSystemItem result = new File(getParent(), newFileName);
         result.open();
         // Lógica de conversión de mp3 a wav. Se lee de este fichero y se escribe en result
         result.close();
@@ -38,13 +37,13 @@ public class AudioUtilities extends File {
             throw new InvalidFileFormatException("El fichero debe ser wav");
         }
 
-        int indexOfLastDot = name.lastIndexOf(".");
-        String nameWithoutExtension = name;
+        int indexOfLastDot = getName().lastIndexOf(".");
+        String nameWithoutExtension = getName();
         if (indexOfLastDot > 0) {
-            nameWithoutExtension = name.substring(0, indexOfLastDot);
+            nameWithoutExtension = getName().substring(0, indexOfLastDot);
         }
         String newFileName = nameWithoutExtension + ".mp3";
-        FileSystemItem result = new File(parent, newFileName);
+        FileSystemItem result = new File(getParent(), newFileName);
         result.open();
         // Lógica de conversión de wav a mp3. Se lee de este fichero y se escribe en result
         result.close();

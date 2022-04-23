@@ -3,9 +3,9 @@ package com.kreitek.files;
 import com.kreitek.files.Directory.Directory;
 
 public abstract class FileSystemItemBase implements FileSystemItem {
-    protected static final String PATH_SEPARATOR = "/";
-    protected String name;
-    protected FileSystemItem parent;
+    private static final String PATH_SEPARATOR = "/";
+    private String name;
+    private FileSystemItem parent;
 
     protected FileSystemItemBase(FileSystemItem parent, String name) {
         setName(name);
