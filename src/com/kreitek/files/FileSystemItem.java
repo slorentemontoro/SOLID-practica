@@ -15,6 +15,4 @@ public interface FileSystemItem {
     void open();
     void close();
     void write(byte[] buffer);
-
-
 }
