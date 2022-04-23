@@ -1,10 +1,8 @@
-package com.kreitek.files.File;
+package com.kreitek.files;
 
-import com.kreitek.files.File.File;
-import com.kreitek.files.FileSystemItem;
 import com.kreitek.files.error.InvalidFileFormatException;
 
-public class AudioUtilities extends File {
+public class AudioUtilities extends File{
 
 
     public AudioUtilities(FileSystemItem parent, String name){
